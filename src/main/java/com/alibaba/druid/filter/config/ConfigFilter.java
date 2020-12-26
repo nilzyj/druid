@@ -15,15 +15,6 @@
  */
 package com.alibaba.druid.filter.config;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.net.URL;
-import java.security.PublicKey;
-import java.sql.SQLException;
-import java.util.Properties;
-
 import com.alibaba.druid.filter.FilterAdapter;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidDataSourceFactory;
@@ -32,6 +23,15 @@ import com.alibaba.druid.support.logging.Log;
 import com.alibaba.druid.support.logging.LogFactory;
 import com.alibaba.druid.util.JdbcUtils;
 import com.alibaba.druid.util.StringUtils;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.net.URL;
+import java.security.PublicKey;
+import java.sql.SQLException;
+import java.util.Properties;
 
 /**
  * <pre>
@@ -105,6 +105,7 @@ public class ConfigFilter extends FilterAdapter {
     public ConfigFilter(){
     }
 
+    @Override
     public void init(DataSourceProxy dataSourceProxy) {
         if (!(dataSourceProxy instanceof DruidDataSource)) {
             LOG.error("ConfigLoader only support DruidDataSource");

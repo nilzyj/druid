@@ -41,11 +41,13 @@ public class DruidPooledPreparedStatementTest1 extends TestCase {
                 throw new SQLException();
             }
 
+            @Override
             public ResultSetProxy preparedStatement_executeQuery(FilterChain chain, PreparedStatementProxy statement)
                                                                                                                      throws SQLException {
                 throw new SQLException();
             }
 
+            @Override
             public void preparedStatement_clearParameters(FilterChain chain, PreparedStatementProxy statement)
                                                                                                               throws SQLException {
                 throw new SQLException();

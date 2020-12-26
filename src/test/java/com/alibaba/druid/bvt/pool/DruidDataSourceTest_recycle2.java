@@ -32,6 +32,7 @@ public class DruidDataSourceTest_recycle2 extends TestCase {
         dataSource.setTestOnBorrow(false);
         dataSource.getProxyFilters().add(new FilterAdapter() {
 
+            @Override
             public void connection_rollback(FilterChain chain, ConnectionProxy connection) throws SQLException {
                 throw new SQLException();
             }

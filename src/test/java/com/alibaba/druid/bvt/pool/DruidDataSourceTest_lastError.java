@@ -28,6 +28,7 @@ public class DruidDataSourceTest_lastError extends TestCase {
 
         dataSource.getProxyFilters().add(new FilterAdapter() {
 
+            @Override
             public void connection_setAutoCommit(FilterChain chain, ConnectionProxy connection, boolean autoCommit)
                                                                                                                    throws SQLException {
                 throw new SQLException();

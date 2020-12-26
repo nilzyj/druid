@@ -29,6 +29,7 @@ public class DruidDataSourceTest_createError extends TestCase {
         dataSource.setInitialSize(1);
         dataSource.getProxyFilters().add(new FilterAdapter() {
 
+            @Override
             public ConnectionProxy connection_connect(FilterChain chain, Properties info) throws SQLException {
                 throw new SQLException();
             }

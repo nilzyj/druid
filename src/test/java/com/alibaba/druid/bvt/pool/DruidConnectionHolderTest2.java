@@ -25,6 +25,7 @@ public class DruidConnectionHolderTest2 extends PoolTestCase {
         dataSource.setPoolPreparedStatements(true);
         dataSource.getProxyFilters().add(new FilterAdapter() {
 
+            @Override
             public int connection_getTransactionIsolation(FilterChain chain, ConnectionProxy connection)
                                                                                                         throws SQLException {
                 throw new SQLException();

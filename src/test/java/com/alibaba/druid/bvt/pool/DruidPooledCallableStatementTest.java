@@ -32,6 +32,7 @@ public class DruidPooledCallableStatementTest extends TestCase {
 
         dataSource.getProxyFilters().add(new FilterAdapter() {
 
+            @Override
             public boolean callableStatement_wasNull(FilterChain chain, CallableStatementProxy statement)
                                                                                                          throws SQLException {
                 if (throwError) {

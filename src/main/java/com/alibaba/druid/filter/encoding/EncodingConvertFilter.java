@@ -44,6 +44,7 @@ public class EncodingConvertFilter extends FilterAdapter {
     private String             clientEncoding;
     private String             serverEncoding;
 
+    @Override
     public ConnectionProxy connection_connect(FilterChain chain, Properties info) throws SQLException {
         ConnectionProxy conn = chain.connection_connect(info);
 

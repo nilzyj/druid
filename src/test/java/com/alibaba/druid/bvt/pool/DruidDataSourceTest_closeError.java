@@ -25,6 +25,7 @@ public class DruidDataSourceTest_closeError extends TestCase {
         dataSource.setInitialSize(1);
         dataSource.getProxyFilters().add(new FilterAdapter() {
 
+            @Override
             public void connection_close(FilterChain chain, ConnectionProxy connection) throws SQLException {
                 throw new SQLException();
             }

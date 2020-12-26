@@ -26,6 +26,7 @@ public class MergeStatFilter extends StatFilter {
         return iface == MergeStatFilter.class || iface == StatFilter.class;
     }
 
+    @Override
     @SuppressWarnings("unchecked")
     public <T> T unwrap(Class<T> iface) {
         if (iface == MergeStatFilter.class || iface == StatFilter.class) {

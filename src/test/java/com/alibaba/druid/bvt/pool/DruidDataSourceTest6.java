@@ -51,6 +51,7 @@ public class DruidDataSourceTest6 extends TestCase {
 
         dataSource.getProxyFilters().add(new FilterAdapter() {
 
+            @Override
             public ResultSetProxy statement_executeQuery(FilterChain chain, StatementProxy statement, String sql)
                                                                                                                  throws SQLException {
                 if (errorCount.get() > 0) {

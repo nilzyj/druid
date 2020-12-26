@@ -176,6 +176,7 @@ public class StatFilter extends FilterEventAdapter implements StatFilterMBean {
         }
     }
 
+    @Override
     public void configFromProperties(Properties properties) {
         if (properties == null) {
             return;
@@ -212,6 +213,7 @@ public class StatFilter extends FilterEventAdapter implements StatFilterMBean {
         }
     }
 
+    @Override
     public ConnectionProxy connection_connect(FilterChain chain, Properties info) throws SQLException {
         ConnectionProxy connection = null;
 

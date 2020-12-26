@@ -32,6 +32,7 @@ public class DruidDataSourceTest3 extends TestCase {
 
         dataSource.getProxyFilters().add(new FilterAdapter() {
 
+            @Override
             public ConnectionProxy connection_connect(FilterChain chain, Properties info) throws SQLException {
                 try {
                     Thread.sleep(Long.MAX_VALUE);

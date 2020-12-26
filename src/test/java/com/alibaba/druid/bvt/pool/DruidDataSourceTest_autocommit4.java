@@ -29,6 +29,7 @@ public class DruidDataSourceTest_autocommit4 extends TestCase {
         dataSource.setDefaultAutoCommit(true);
         dataSource.setInitialSize(1);
         dataSource.getProxyFilters().add(new FilterAdapter() {
+            @Override
             public ConnectionProxy connection_connect(FilterChain chain, Properties info) throws SQLException {
                 ConnectionProxy conn = chain.connection_connect(info);
                 conn.setAutoCommit(true);

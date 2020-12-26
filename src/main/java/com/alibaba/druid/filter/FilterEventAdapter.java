@@ -32,6 +32,7 @@ public abstract class FilterEventAdapter extends FilterAdapter {
     public FilterEventAdapter(){
     }
 
+    @Override
     public ConnectionProxy connection_connect(FilterChain chain, Properties info) throws SQLException {
         connection_connectBefore(chain, info);
 
