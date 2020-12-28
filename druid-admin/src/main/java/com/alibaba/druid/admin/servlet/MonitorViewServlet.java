@@ -20,6 +20,7 @@ public class MonitorViewServlet extends ResourceServlet {
         super("support/http/resources");
     }
 
+    @Override
     public void init() throws ServletException {
         log.info("init MonitorViewServlet");
         super.init();

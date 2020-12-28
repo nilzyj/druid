@@ -16,7 +16,9 @@ public class DruidAdminApplication {
         SpringApplication.run(DruidAdminApplication.class, args);
     }
 
-
+    /**
+     * springboot中自定义servlet
+     */
     @Bean
     public ServletRegistrationBean statViewServletRegistrationBean(MonitorProperties properties) {
         ServletRegistrationBean registrationBean = new ServletRegistrationBean();
